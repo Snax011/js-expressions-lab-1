@@ -22,6 +22,12 @@ module.exports = {
 };
 // Step 1: Create variables for the data recorded (temperatures for 30 days)
 // Step 1: Temperature data variables
+
+// Step 6: Export variables for testing
+// Temperature data for 30 days (Fahrenheit and Celsius alternating)
+// Temperature data for 30 days (Fahrenheit and Celsius alternating)
+// Temperature data for 30 days (Fahrenheit and Celsius alternating)
+// Temperature data for 30 days (Fahrenheit and Celsius alternating)
 const day1TempF = 32;
 const day2TempC = 25;
 const day3TempF = 70;
@@ -53,7 +59,7 @@ const day28TempC = 17;
 const day29TempF = 76;
 const day30TempC = 29;
 
-// Step 2: Conversion functions
+// Conversion functions
 function fToC(f) {
   return (f - 32) * 5 / 9;
 }
@@ -62,10 +68,11 @@ function cToF(c) {
   return (c * 9 / 5) + 32;
 }
 
-// Step 3: Calculate total temperatures
+// Initialize totals
 let tot_temperature_in_fahrenheit = 0;
 let tot_temperature_in_celsius = 0;
 
+// Add temperatures day by day, converting as needed
 tot_temperature_in_fahrenheit += day1TempF;
 tot_temperature_in_celsius += fToC(day1TempF);
 
@@ -156,24 +163,14 @@ tot_temperature_in_celsius += fToC(day29TempF);
 tot_temperature_in_fahrenheit += cToF(day30TempC);
 tot_temperature_in_celsius += day30TempC;
 
-// Step 4: Calculate average temperatures
+// Calculate averages
 const avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / 30;
 const avg_temperature_in_celsius = tot_temperature_in_celsius / 30;
 
-// Step 5: Optional console logs
-console.log("Total temperature in Fahrenheit:", tot_temperature_in_fahrenheit.toFixed(2));
-console.log("Total temperature in Celsius:", tot_temperature_in_celsius.toFixed(2));
-console.log("Average temperature in Fahrenheit:", avg_temperature_in_fahrenheit.toFixed(2));
-console.log("Average temperature in Celsius:", avg_temperature_in_celsius.toFixed(2));
-
-// Step 6: Export variables for testing
+// Export variables for testing
 module.exports = {
   tot_temperature_in_fahrenheit,
   tot_temperature_in_celsius,
   avg_temperature_in_fahrenheit,
   avg_temperature_in_celsius
 };
-console.log("Total Fahrenheit:", tot_temperature_in_fahrenheit);
-console.log("Total Celsius:", tot_temperature_in_celsius);
-console.log("Average Fahrenheit:", avg_temperature_in_fahrenheit);
-console.log("Average Celsius:", avg_temperature_in_celsius);
